@@ -1,0 +1,13 @@
+Style/Documentation:
+  Enabled: false
+
+# Due to conditional loading of Rubocop
+Lint/HandleExceptions:
+  Exclude:
+    - Rakefile
+
+# For Ruby 1.8 compatibility
+Style/DotPosition:
+  EnforcedStyle: trailing
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets
