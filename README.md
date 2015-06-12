@@ -2,7 +2,7 @@
 
 A Ruby gem for finding strings in text using the [Aho-Corasick string matching search](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.4671&rep=rep1&type=pdf)
 
-Aho-Corasick is `O(n + m)` where `m` is the size of the string to be searched
+Aho-Corasick is `O(n + m)` where `n` is the size of the string to be searched
 and `m` is the size of the dictionary. This means it's particularly suited for
 searching for occurances of words using large dictionaries, as the runtime
 increases only linearly.
