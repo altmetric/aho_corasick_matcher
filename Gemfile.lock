@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    aho_corasick_matcher (0.0.1)
+    aho (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -40,7 +40,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aho_corasick_matcher!
+  aho!
   rake (~> 10.4)
   rspec (~> 3.2)
   rubocop (~> 0.30)
