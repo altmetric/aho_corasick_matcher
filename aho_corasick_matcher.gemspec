@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name = 'aho_corasick_matcher'
-  s.version = '0.0.1'
-  s.summary = 'A library to search text for occurances of a list of strings'
+  s.version = '1.0.0'
+  s.summary = 'A library to search text for occurrences of a list of strings'
   s.description = <<-EOF
-    Uses the fast Aho-Corasick text search system to find occurances of any of
+    Uses the fast Aho-Corasick text search system to find occurrences of any of
     a dictionary of strings across an input string.
   EOF
   s.license = 'MIT'

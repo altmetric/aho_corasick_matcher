@@ -22,7 +22,7 @@ RSpec.describe AhoCorasickMatcher do
       expect(matcher.match('I am a different string')).to be_empty
     end
 
-    it 'finds all occurances of strings' do
+    it 'finds all occurrences of strings' do
       expect(
         matcher.match('I am a TestString and I say TestString twice')
       ).to eq(%w(TestString TestString))
