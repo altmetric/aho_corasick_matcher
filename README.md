@@ -11,6 +11,7 @@ It's quite memory-intensive, and building a matcher is expensive – but once i
 been built, matching terms is very fast.
 
 **Current version:** 0.0.1
+
 **Supported Ruby versions:** 1.9.2, 1.9.3, 2.0, 2.1, 2.2, jruby-1.7, rbx-2.2, rbx-2.4
 
 ## Usage
@@ -21,7 +22,15 @@ require 'aho'
 matcher = AhoCorasickMatcher.new(['a', 'b', 'ab'])
 matcher.match('aba')
 #=> ['a', 'ab', 'b', 'a']
+
+matcher = AhoCorasickMatcher.new(["thistle", "sift", "thistles"])
+matcher.match("Theophilus thistle, the successful thistle sifter, in sifting a sieve full of un-sifted thistles, thrust three thousand thistles through the thick of his thumb.")
+#=> ["thistle", "thistle", "sift", "sift", "sift", "thistle", "thistles", "thistle", "thistles"]
 ```
+
+## Thanks
+
+Loosely based on Tim Colinshaw's implementation of the same algorithm https://github.com/timcowlishaw/aho_corasick
 
 ## License
 
