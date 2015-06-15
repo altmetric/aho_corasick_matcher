@@ -1,4 +1,9 @@
+require 'thread'
+
 class AhoCorasickMatcher
+  attr_reader :root
+  private :root
+
   def initialize(dictionary)
     @root = Node.new
 
@@ -17,8 +22,6 @@ class AhoCorasickMatcher
   end
 
   private
-
-  attr_reader :root
 
   def build_trie(dictionary)
     dictionary.each do |string|
