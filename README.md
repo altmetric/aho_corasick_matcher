@@ -30,7 +30,7 @@ matcher.match("Theophilus thistle, the successful thistle sifter, in sifting a s
 
 ## Thanks
 
-Loosely based on Tim Colinshaw's implementation of the same algorithm https://github.com/timcowlishaw/aho_corasick
+Loosely based on Tim Cowlishaw's implementation of the same algorithm https://github.com/timcowlishaw/aho_corasick
 
 ## License
 
