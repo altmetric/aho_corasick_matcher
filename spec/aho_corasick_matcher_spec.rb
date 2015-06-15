@@ -1,4 +1,4 @@
-require 'aho'
+require 'aho_corasick_matcher'
 
 RSpec.describe AhoCorasickMatcher do
   subject(:matcher) { described_class.new(dict) }

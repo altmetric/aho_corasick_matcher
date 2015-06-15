@@ -1,4 +1,4 @@
-# Aho [![Build Status](https://travis-ci.org/altmetric/aho.svg?branch=master)](https://travis-ci.org/altmetric/aho)
+# AhoCorasickMatcher [![Build Status](https://travis-ci.org/altmetric/aho_corasick_matcher.svg?branch=master)](https://travis-ci.org/altmetric/aho_corasick_matcher)
 
 A Ruby gem for finding strings in text using the [Aho-Corasick string matching search](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.4671&rep=rep1&type=pdf)
 
@@ -17,7 +17,7 @@ been built, matching terms is very fast.
 ## Usage
 
 ```ruby
-require 'aho'
+require 'aho_corasick_matcher'
 
 matcher = AhoCorasickMatcher.new(['a', 'b', 'ab'])
 matcher.match('aba')
