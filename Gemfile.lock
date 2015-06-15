@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    aho_corasick_matcher (0.0.1)
+    aho_corasick_matcher (1.0.0)
 
 GEM
   remote: https://rubygems.org/
