@@ -78,14 +78,4 @@ RSpec.describe AhoCorasickMatcher do
       ).to eq(%w(Test TestString String Test))
     end
   end
-
-  context 'science' do
-    let(:dict) { %w(science nature) }
-
-    it 'finds all matching strings' do
-      expect(
-        matcher.match('Published in science and nature')
-      ).to eq(%w(science nature))
-    end
-  end
 end
