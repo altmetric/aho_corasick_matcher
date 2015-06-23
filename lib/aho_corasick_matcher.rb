@@ -50,8 +50,8 @@ class AhoCorasickMatcher
   end
 
   class Node
-    attr_reader :matches, :child_map, :suffix, :parent
-    attr_writer :suffix
+    attr_reader :matches, :child_map, :parent
+    attr_accessor :suffix
 
     def initialize(parent = nil)
       @matches = []
@@ -60,15 +60,15 @@ class AhoCorasickMatcher
     end
 
     def search(char)
-      @child_map[char] || suffix && suffix.search(char)
+      child_map[char] || (suffix && suffix.search(char))
     end
 
     def child_or_create(char)
-      @child_map[char] ||= self.class.new(self)
+      child_map[char] ||= self.class.new(self)
     end
 
     def children
-      @child_map.values
+      child_map.values
     end
 
     def root?
