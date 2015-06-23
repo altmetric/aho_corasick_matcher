@@ -12,13 +12,16 @@ class AhoCorasickMatcher
   end
 
   def match(string)
-    [].tap do |matches|
-      string.each_char.reduce(root) do |node, char|
-        (node || root).search(char.intern).tap do |child|
-          matches.push(*child.matches) if child
-        end
-      end
+    matches = []
+    string.each_char.reduce(root) do |node, char|
+      child = (node || root).search(char.intern)
+      next unless child
+
+      matches.push(*child.matches)
+      child
     end
+
+    matches
   end
 
   private
