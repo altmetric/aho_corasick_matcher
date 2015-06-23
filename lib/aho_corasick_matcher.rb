@@ -72,7 +72,7 @@ class AhoCorasickMatcher
     end
 
     def root?
-      parent.nil?
+      !parent
     end
 
     def build_child_suffixes
@@ -92,6 +92,7 @@ class AhoCorasickMatcher
     def find_failure_node(char)
       failure = suffix
       failure = failure.suffix until failure.search(char) || failure.root?
+
       failure
     end
   end
