@@ -1,4 +1,4 @@
-# AhoCorasickMatcher [![Build Status](https://travis-ci.org/altmetric/aho_corasick_matcher.svg?branch=master)](https://travis-ci.org/altmetric/aho_corasick_matcher)
+# Aho-Corasick Matcher [![Build Status](https://travis-ci.org/altmetric/aho_corasick_matcher.svg?branch=master)](https://travis-ci.org/altmetric/aho_corasick_matcher)
 
 A Ruby gem for finding strings in text using the [Aho-Corasick string matching search](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.4671&rep=rep1&type=pdf).
 
@@ -22,14 +22,14 @@ matcher = AhoCorasickMatcher.new(['a', 'b', 'ab'])
 matcher.match('aba')
 #=> ['a', 'ab', 'b', 'a']
 
-matcher = AhoCorasickMatcher.new(["thistle", "sift", "thistles"])
-matcher.match("Theophilus thistle, the successful thistle sifter, in sifting a sieve full of un-sifted thistles, thrust three thousand thistles through the thick of his thumb.")
+matcher = AhoCorasickMatcher.new(['thistle', 'sift', 'thistles'])
+matcher.match('Theophilus thistle, the successful thistle sifter, in sifting a sieve full of un-sifted thistles, thrust three thousand thistles through the thick of his thumb.')
 #=> ["thistle", "thistle", "sift", "sift", "sift", "thistle", "thistles", "thistle", "thistles"]
 ```
 
 ## Thanks
 
-Loosely based on Tim Cowlishaw's implementation of the same algorithm https://github.com/timcowlishaw/aho_corasick
+Loosely based on [Tim Cowlishaw's implementation of the same algorithm](https://github.com/timcowlishaw/aho_corasick).
 
 ## License
 
