@@ -78,4 +78,12 @@ RSpec.describe AhoCorasickMatcher do
       ).to eq(%w(Test TestString String Test))
     end
   end
+
+  describe '#inspect' do
+    let(:dict) { ('aaa'...'bbb').to_a }
+
+    it 'does not include instance variables to prevent stack explosions' do
+      expect(matcher.inspect).not_to include('@child_map')
+    end
+  end
 end

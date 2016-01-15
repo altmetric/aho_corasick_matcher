@@ -95,5 +95,9 @@ class AhoCorasickMatcher
 
       failure
     end
+
+    def inspect
+      format('#<%s:0x%x', self.class.name, object_id << 1)
+    end
   end
 end
