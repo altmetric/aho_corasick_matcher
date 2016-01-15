@@ -11,3 +11,7 @@ Style/DotPosition:
   EnforcedStyle: trailing
 Style/HashSyntax:
   EnforcedStyle: hash_rockets
+
+# Overwrite Hound default
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
