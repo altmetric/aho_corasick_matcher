@@ -10,7 +10,7 @@ increases only linearly.
 It's quite memory-intensive, and building a matcher is expensive – but once it's
 been built, matching terms is very fast.
 
-**Current version:** 1.0.1  
+**Current version:** 1.0.2  
 **Supported Ruby versions:** 1.8.7, 1.9.2, 1.9.3, 2.0, 2.1, 2.2, jruby-1.7, rbx-2.5
 
 ## Usage
@@ -33,6 +33,6 @@ Loosely based on [Tim Cowlishaw's implementation of the same algorithm](https://
 
 ## License
 
-Copyright © 2015 Altmetric LLP
+Copyright © 2015-2016 Altmetric LLP
 
 Distributed under the MIT License.
