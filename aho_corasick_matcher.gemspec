@@ -7,10 +7,10 @@ Gem::Specification.new do |s|
     a dictionary of strings across an input string.
   EOF
   s.license = 'MIT'
-  s.authors = ['Matthew MacLeod']
-  s.email = 'support@altmetric.com'
-  s.homepage = 'https://github.com/altmetric/aho_corasick_matcher'
-  s.files = %w(README.md LICENSE lib/aho_corasick_matcher.rb)
+  s.authors = ['Dino']
+  s.email = 'dino@beansmile.com'
+  s.homepage = 'https://github.com/beansmile/aho_corasick_matcher'
+  s.files = Dir['lib/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['spec/**/*.rb']
 
   s.add_development_dependency('rspec', '~> 3.2')

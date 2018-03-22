@@ -1,5 +1,7 @@
 # Aho-Corasick Matcher [![Build Status](https://travis-ci.org/altmetric/aho_corasick_matcher.svg?branch=master)](https://travis-ci.org/altmetric/aho_corasick_matcher)
 
+**fork from [altmetric/aho_corasick_matcher](https://github.com/altmetric/aho_corasick_matcher)**
+
 A Ruby gem for finding strings in text using the [Aho-Corasick string matching search](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.4671&rep=rep1&type=pdf).
 
 Aho-Corasick is `O(n + m)` where `n` is the size of the string to be searched
@@ -17,14 +19,32 @@ been built, matching terms is very fast.
 
 ```ruby
 require 'aho_corasick_matcher'
+require 'aho_corasick_matcher_error'
 
-matcher = AhoCorasickMatcher.new(['a', 'b', 'ab'])
+matcher = AhoCorasick::AhoCorasickMatcher.new(['a', 'b', 'ab'])
 matcher.match('aba')
 #=> ['a', 'ab', 'b', 'a']
 
 matcher = AhoCorasickMatcher.new(['thistle', 'sift', 'thistles'])
 matcher.match('Theophilus thistle, the successful thistle sifter, in sifting a sieve full of un-sifted thistles, thrust three thousand thistles through the thick of his thumb.')
 #=> ["thistle", "thistle", "sift", "sift", "sift", "thistle", "thistles", "thistle", "thistles"]
+```
+
+or use the `runner` if we don't need to initialize a new matcher everytime
+
+```ruby
+require 'aho_corasick_matcher'
+require 'aho_corasick_matcher_error'
+
+# AhoCorasick::AhoCorasickMatcher.runner('new dictionary string')
+matcher1 = AhoCorasick::AhoCorasickMatcher.runner('a b ab')
+matcher2 = AhoCorasick::AhoCorasickMatcher.runner
+
+matcher1.match('aba')
+#=> ['a', 'ab', 'b', 'a']
+
+matcher2.match('aba')
+#=> ['a', 'ab', 'b', 'a']
 ```
 
 ## Thanks
